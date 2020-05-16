@@ -11,10 +11,12 @@ export function Golf(props) {
       }}>
       
       <span className="course-played">{score.course}</span>
-      <span className="delete-button">&#x2716;</span>
+      <span className="delete-button" onClick={() => props.remove(score.date)}>&#x2716;</span>
       <span className="score-round">{score.round}</span>
       <span className="weather">{score.weather}</span>
       <span className="holes">{score.holes}</span>
+      <span className="date">{score.date}</span>
+      
       
 
     </div>
