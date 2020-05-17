@@ -1,21 +1,22 @@
 import React from 'react';
+import './Golf.css';
 
 export function Golf(props) {
-  const golf = props.golf;
+  const rounds = props.rounds;
   const months = ["January", "February", "March", "April", "May", "June", "July",
   "August", "September", "October", "November", "December"];
   
   return (
-    <div className="golf">
-      <div className="golf-left">
-        <span className="year">{golf.year}</span>
-        <span className="month">{months[golf.month - 1]} {golf.day}</span>
-        <span className="course">{golf.course}</span>
-        <span className="weather">{golf.weather}</span>
-        <span className="holes">{golf.holes}</span>
-        <span className="score">{golf.score}</span>
-
-      </div>
+    <div className="golf">   
+      <div className="golf-round">
+        <span className="year">{rounds.year}</span>
+        <span className="month">{months[rounds.month - 1]} {rounds.day}</span>
+        <span className="course">{rounds.course}</span>
+        <span className="weather">{rounds.weather}</span>
+        <span className="holes">{rounds.holes} holes</span>
+        <span className="score">{rounds.score} strokes</span> 
+      </div>   
+         
     </div>
   )
 }

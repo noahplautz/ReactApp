@@ -1,0 +1,49 @@
+.golf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.golf-round {
+  box-sizing: border-box;
+  position: relative;
+  width: 400px;
+  height: 100px;
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px black; 
+}
+.golf-round > .year {
+  top: 10px;
+  left: 40px;
+  font-size: 24pt;
+  position: absolute;
+}
+.golf-round > .month {
+  position: absolute;
+  top: 60px;
+  left: 53px;
+}
+.golf-round > .course {
+  position: absolute;
+  left: 150px;
+  top: 22px;
+}
+.golf-round > .weather {
+  position: absolute;
+  left: 150px;
+  top: 59px;
+}
+.golf-round > .holes {
+  position: absolute;
+  top: 22px;
+  right: 70px;
+}
+.golf-round > .score {
+  position: absolute;
+  right: 70px;
+  top: 59px;
+}
