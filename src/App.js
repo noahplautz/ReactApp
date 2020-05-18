@@ -2,8 +2,13 @@ import React, {useEffect} from 'react';
 import './App.css';
 import {Golf} from './Golf';
 import {useSelector, useDispatch} from 'react-redux';
-import {loadDay} from './actions';
+import {loadDay, startAddingRound} from './actions';
 
+
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getMonth() + 1;
+const day = date.getDate();
 
 
 function App() {
@@ -12,13 +17,16 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(loadDay());
+  }, [dispatch]);
 
-    dispatch(loadDay(4, 7));
-  },[dispatch]);
+  const onAdd = () => {
+    dispatch(startAddingRound(year, month, day));
+  }
 
   return (
     <div className="golf-root">
-      
+      <button onClick={onAdd}>new round</button>
       {rounds.map(rounds => <Golf key={rounds.id}rounds={rounds}/>)}
 
     </div>

@@ -7,8 +7,8 @@
 .golf-round {
   box-sizing: border-box;
   position: relative;
-  width: 400px;
-  height: 100px;
+  width: 500px;
+  height: 150px;
   background-color: green;
   border-radius: 10px;
   color: white;
@@ -46,4 +46,60 @@
   position: absolute;
   right: 70px;
   top: 59px;
+}
+.golf-round > .edit-button {
+  position: absolute;
+  left: 170px;
+  bottom: 10px;
+}
+.golf-round > .year-input {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.golf-round > .month-input {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+}
+.golf-round > .day-input {
+  position: absolute;
+  left: 10px;
+  top: 90px;
+}
+.golf-round > .course-input {
+  position: absolute;
+  left: 200px;
+  top: 10px;
+}
+.golf-round > .weather-input {
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+.golf-round > .holes-input {
+  position: absolute;
+  left: 200px;
+  top: 90px;
+}
+.golf-round > .score-input {
+  position: absolute;
+  left: 390px;
+  top: 10px;
+  width: 100px;
+}
+.golf-round > .save-button {
+  position: absolute;
+  left: 390px;
+  top: 50px;
+}
+.golf-round > .cancel-button {
+  position: absolute;
+  left: 390px;
+  top: 90px;
+}
+.golf-round > .delete-button {
+  position: absolute;
+  top: 90px;
+  right: 1px;
 }
