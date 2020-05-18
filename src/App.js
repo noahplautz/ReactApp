@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="golf-root">
-      <button onClick={onAdd}>new round</button>
+      <button className="new-button" onClick={onAdd}>new round</button>
       {rounds.map(rounds => <Golf key={rounds.id}rounds={rounds}/>)}
 
     </div>

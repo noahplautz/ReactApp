@@ -60,21 +60,19 @@ export function Golf(props) {
         <button onClick={onDelete} className="delete-button">delete</button>
       </div>   
        
-    </div> );
+    </div>);
   } else {  
     return (
       <div className="golf">   
-        <div className="golf-round">
-          
+        <div className="golf-round">          
           <span className="year">{rounds.year}</span>
           <span className="month">{months[rounds.month - 1]} {rounds.day}</span>
           <button className="edit-button" onClick={onEdit}>edit</button>
           <span className="course">{rounds.course}</span>
           <span className="weather">{rounds.weather}</span>
-          <span className="holes">{rounds.holes}</span>
-          <span className="score">{rounds.score}</span> 
-        </div>   
-            
+          <span className="holes">{rounds.holes} holes</span>
+          <span className="score">{rounds.score} strokes</span> 
+        </div>            
       </div>
     );
   }

@@ -3,96 +3,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5px;
-}/*
-.golf {
-  margin-top: 10px;
+}
+.new-button {
   margin-left: 10px;
-  width: 400px;
-  height: 150px;
-  background-color: green;
-  box-sizing: border-box;
-  border-radius: 10px;
-  color: white;
-  text-shadow: 0 0 3px black;
-  position: relative;
-}
-
-.golf > .delete-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  user-select: none;
-}
-
-.golf > .delete-button:hover {
-  cursor: pointer;
-
-  transform: scale(1.6);
-
-}
-.golf > .course-played {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.golf > .score-round {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-.golf > .weather {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.golf > .holes {
-  position: absolute;
-  bottom: 10px;
-  right: 50px;
-}
-.golf > .date {
-  position: absolute;
-  top: 40px;
-  left: 10px;
-}
-
-
-
-#course-input {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-#date-input {
-  position: absolute;
-  left: 10px;
-  top: 45px;
-  width: 150px;
+  margin-bottom: 10px;
   
 }
-#score-input {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 50px;
-  
-}
-#weather-input {
-  position: absolute;
-  
-  bottom: 45px;
-  left: 10px;
-  width: 100px;
-}
-#hole-input {
-  position: absolute;
-  bottom: 10px;
-  right: 150px;
-  width: 50px;
-}
-#add-button {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-} */
