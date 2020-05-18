@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './App.css';
 import {Golf} from './Golf';
 import {useSelector, useDispatch} from 'react-redux';
-import {loadDay, startAddingRound} from './actions';
+import {loadAll, startAddingRound} from './actions';
 
 
 const date = new Date();
@@ -17,7 +17,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadDay());
+    dispatch(loadAll());
   }, [dispatch]);
 
   const onAdd = () => {

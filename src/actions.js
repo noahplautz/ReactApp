@@ -7,10 +7,10 @@ export const Action = Object.freeze({
   FinishDeletingRound: 'FinishDeletingRound',
 });
 
-export function loadRounds(round) {
+export function loadRounds(rounds) {
   return {
     type: Action.LoadRounds,
-    payload: round
+    payload: rounds,
   };
 }
 
@@ -49,23 +49,23 @@ export function leaveEditMode(round) {
   }
 }
 
-function checkForErros(response) {
+function checkForErrors(response) {
   if(!response.ok) {
     throw Error(`${response.status}: ${response.statusText}`);
   }
   return response;
 }
+
 const host = 'https://project2-api.duckdns.org:8442';
 
-export function loadDay() {
-  
+export function loadAll() {
   return dispatch => {
     fetch(`${host}/rounds`)
-    .then(checkForErros)
+    .then(checkForErrors)
     .then(response => response.json())
     .then(data => {
       if(data.ok) {
-        loadRounds(data.rounds)
+        dispatch(loadRounds(data.rounds));
       }
     })
     .catch(e => console.error(e));
@@ -84,7 +84,7 @@ export function startAddingRound(year, month, day) {
 
   return dispatch => {
     fetch(`${host}/rounds`, options)
-    .then(checkForErros)
+    .then(checkForErrors)
     .then(response => response.json())
     .then(data => {
       if(data.ok) {
@@ -107,7 +107,7 @@ export function startSavingRound(round) {
 
   return dispatch => {
     fetch(`${host}/rounds/${round.id}`, options)
-    .then(checkForErros)
+    .then(checkForErrors)
     .then(response => response.json())
     .then(data => {
       if(data.ok) {
@@ -125,7 +125,7 @@ export function startDeletingRound(round) {
 
   return dispatch => {
     fetch(`${host}/rounds/${round.id}`, options)
-    .then(checkForErros)
+    .then(checkForErrors)
     .then(response => response.json())
     .then(data => {
       if(data.ok) {
